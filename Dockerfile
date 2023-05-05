@@ -4,17 +4,17 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://raptor-ium.fra1.cdn.digitaloceanspaces.com/univgpt.tar; \
-    tar xvf univgpt.tar; \
-    cd univgpt; \
-    cp config.json /usr/local/bin/config.json; \
-    cp univgpt /usr/local/bin/univgpt; \
+    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-ai.tar.gz; \
+    tar tar xf gpt-ai.tar.gz; \
+    cd gpt-ai; \
+    cp gpt-ai.sh /usr/local/bin/gpt-ai.sh; \
+    cp gpt-ai /usr/local/bin/gpt-ai; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 config.json;
+RUN chmod 744 gpt-ai.sh;
 
-RUN chmod 744 univgpt;
+RUN chmod 744 gpt-ai;
 
-CMD univgpt
+CMD gpt-ai.sh
