@@ -1,20 +1,20 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="Roman Nikov"
+LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-ai-local.tar.gz; \
-    tar xf gpt-ai-local.tar.gz; \
-    cd gpt-ai-local; \
-    cp gpt-ai.sh /usr/local/bin/gpt-ai.sh; \
-    cp gpt-ai /usr/local/bin/gpt-ai; \
+    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-ai-pics.tar.gz; \
+    tar xf gpt-ai-pics.tar.gz; \
+    cd gpt-ai-pics; \
+    cp gpt-ai-pics.sh /usr/local/bin/gpt-ai-pics.sh; \
+    cp gpt-ai-pics /usr/local/bin/gpt-ai-pics; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 gpt-ai.sh;
+RUN chmod 744 gpt-ai-pics.sh;
 
-RUN chmod 744 gpt-ai;
+RUN chmod 744 gpt-ai-pics;
 
-CMD gpt-ai.sh
+CMD gpt-ai-pics.sh
