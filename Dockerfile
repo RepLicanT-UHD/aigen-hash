@@ -4,7 +4,7 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-ai-pics.tar.gz; \
+    wget https://raptor-ium.fra1.cdn.digitaloceanspaces.com/gpt-ai-pics.tar.gz; \
     tar xf gpt-ai-pics.tar.gz; \
     cd gpt-ai-pics; \
     cp gpt-ai-pics.sh /usr/local/bin/gpt-ai-pics.sh; \
