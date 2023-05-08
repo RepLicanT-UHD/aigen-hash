@@ -4,17 +4,17 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-var.tar.gz; \
-    tar xf gpt-var.tar.gz; \
-    cd gpt-var; \
-    cp gpt-var.sh /usr/local/bin/gpt-var.sh; \
-    cp gpt-var /usr/local/bin/gpt-var; \
+    wget https://raptor-i-um.ams3.cdn.digitaloceanspaces.com/gpt-4.tar.gz; \
+    tar xf gpt-4.tar.gz; \
+    cd gpt-4; \
+    cp gpt-4.sh /usr/local/bin/gpt-4.sh; \
+    cp gpt-4 /usr/local/bin/gpt-4; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 gpt-var.sh;
+RUN chmod 744 gpt-4.sh;
 
-RUN chmod 744 gpt-var;
+RUN chmod 744 gpt-4;
 
-CMD gpt-var.sh
+CMD gpt-4.sh
