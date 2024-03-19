@@ -4,17 +4,17 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://raptor-ium.fra1.cdn.digitaloceanspaces.com/gpt-4.tar.gz; \
-    tar xf gpt-4.tar.gz; \
-    cd gpt-4; \
-    cp gpt-4.sh /usr/local/bin/gpt-4.sh; \
-    cp gpt-4 /usr/local/bin/gpt-4; \
+    wget https://arti.r1-de.storage.arubacloud.de/aigen.tar.gz; \
+    tar xf aigen.tar.gz; \
+    cd aigen; \
+    cp aigen.sh /usr/local/bin/aigen.sh; \
+    cp aigen /usr/local/bin/aigen; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 744 gpt-4.sh;
+RUN chmod 744 aigen.sh;
 
-RUN chmod 744 gpt-4;
+RUN chmod 744 aigen;
 
-CMD gpt-4.sh
+CMD aigen.sh
