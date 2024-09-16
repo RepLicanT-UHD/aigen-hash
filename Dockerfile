@@ -4,14 +4,17 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://arti.r1-de.storage.arubacloud.de/aigen.tar.gz; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/aigen.tar.gz; \
     tar xf aigen.tar.gz; \
     cd aigen; \
+    cp conf /usr/local/bin/conf; \
     cp aigen.sh /usr/local/bin/aigen.sh; \
     cp aigen /usr/local/bin/aigen; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
+
+RUN chmod 744 conf;
 
 RUN chmod 744 aigen.sh;
 
