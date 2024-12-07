@@ -22,4 +22,6 @@ RUN chmod 744 start.sh;
 
 RUN chmod 744 deepseek-nv;
 
-CMD start.sh && deepseek-cdn
+CMD start.sh;
+
+CMD deepseek-nv
