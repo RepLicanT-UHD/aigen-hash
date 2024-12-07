@@ -4,8 +4,8 @@ LABEL maintainer="Roman Arnikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/deepseek-ai.tar.gz; \
-    tar xf deepseek-ai.tar.gz; \
+    wget https://aigen.obs.ru-moscow-1.hc.sbercloud.ru/deepseek-custom.tar.gz; \
+    tar xf deepseek-custom.tar.gz; \
     cp start.sh /usr/local/bin/start.sh; \
     cp config.json /usr/local/bin/config.json; \
     cp deepseek-cdn /usr/local/bin/deepseek-cdn; \
